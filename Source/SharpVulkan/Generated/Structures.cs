@@ -6,9 +6,11 @@ namespace SharpVulkan
 {
     public partial struct Instance : IEquatable<Instance>
     {
+        public Instance(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Instance Null = new Instance();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Instance left, Instance right)
         {
@@ -38,9 +40,11 @@ namespace SharpVulkan
 
     public partial struct PhysicalDevice : IEquatable<PhysicalDevice>
     {
+        public PhysicalDevice(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static PhysicalDevice Null = new PhysicalDevice();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(PhysicalDevice left, PhysicalDevice right)
         {
@@ -70,9 +74,11 @@ namespace SharpVulkan
 
     public partial struct Device : IEquatable<Device>
     {
+        public Device(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Device Null = new Device();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Device left, Device right)
         {
@@ -102,9 +108,11 @@ namespace SharpVulkan
 
     public partial struct Queue : IEquatable<Queue>
     {
+        public Queue(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Queue Null = new Queue();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Queue left, Queue right)
         {
@@ -134,9 +142,11 @@ namespace SharpVulkan
 
     public partial struct Semaphore : IEquatable<Semaphore>
     {
+        public Semaphore(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Semaphore Null = new Semaphore();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Semaphore left, Semaphore right)
         {
@@ -166,9 +176,11 @@ namespace SharpVulkan
 
     public partial struct CommandBuffer : IEquatable<CommandBuffer>
     {
+        public CommandBuffer(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static CommandBuffer Null = new CommandBuffer();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(CommandBuffer left, CommandBuffer right)
         {
@@ -198,9 +210,11 @@ namespace SharpVulkan
 
     public partial struct Fence : IEquatable<Fence>
     {
+        public Fence(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Fence Null = new Fence();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Fence left, Fence right)
         {
@@ -230,9 +244,11 @@ namespace SharpVulkan
 
     public partial struct DeviceMemory : IEquatable<DeviceMemory>
     {
+        public DeviceMemory(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DeviceMemory Null = new DeviceMemory();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DeviceMemory left, DeviceMemory right)
         {
@@ -262,9 +278,11 @@ namespace SharpVulkan
 
     public partial struct Buffer : IEquatable<Buffer>
     {
+        public Buffer(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Buffer Null = new Buffer();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Buffer left, Buffer right)
         {
@@ -294,9 +312,11 @@ namespace SharpVulkan
 
     public partial struct Image : IEquatable<Image>
     {
+        public Image(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Image Null = new Image();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Image left, Image right)
         {
@@ -326,9 +346,11 @@ namespace SharpVulkan
 
     public partial struct Event : IEquatable<Event>
     {
+        public Event(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Event Null = new Event();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Event left, Event right)
         {
@@ -358,9 +380,11 @@ namespace SharpVulkan
 
     public partial struct QueryPool : IEquatable<QueryPool>
     {
+        public QueryPool(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static QueryPool Null = new QueryPool();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(QueryPool left, QueryPool right)
         {
@@ -390,9 +414,11 @@ namespace SharpVulkan
 
     public partial struct BufferView : IEquatable<BufferView>
     {
+        public BufferView(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static BufferView Null = new BufferView();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(BufferView left, BufferView right)
         {
@@ -422,9 +448,11 @@ namespace SharpVulkan
 
     public partial struct ImageView : IEquatable<ImageView>
     {
+        public ImageView(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static ImageView Null = new ImageView();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(ImageView left, ImageView right)
         {
@@ -454,9 +482,11 @@ namespace SharpVulkan
 
     public partial struct ShaderModule : IEquatable<ShaderModule>
     {
+        public ShaderModule(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static ShaderModule Null = new ShaderModule();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(ShaderModule left, ShaderModule right)
         {
@@ -486,9 +516,11 @@ namespace SharpVulkan
 
     public partial struct PipelineCache : IEquatable<PipelineCache>
     {
+        public PipelineCache(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static PipelineCache Null = new PipelineCache();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(PipelineCache left, PipelineCache right)
         {
@@ -518,9 +550,11 @@ namespace SharpVulkan
 
     public partial struct PipelineLayout : IEquatable<PipelineLayout>
     {
+        public PipelineLayout(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static PipelineLayout Null = new PipelineLayout();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(PipelineLayout left, PipelineLayout right)
         {
@@ -550,9 +584,11 @@ namespace SharpVulkan
 
     public partial struct RenderPass : IEquatable<RenderPass>
     {
+        public RenderPass(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static RenderPass Null = new RenderPass();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(RenderPass left, RenderPass right)
         {
@@ -582,9 +618,11 @@ namespace SharpVulkan
 
     public partial struct Pipeline : IEquatable<Pipeline>
     {
+        public Pipeline(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Pipeline Null = new Pipeline();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Pipeline left, Pipeline right)
         {
@@ -614,9 +652,11 @@ namespace SharpVulkan
 
     public partial struct DescriptorSetLayout : IEquatable<DescriptorSetLayout>
     {
+        public DescriptorSetLayout(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DescriptorSetLayout Null = new DescriptorSetLayout();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DescriptorSetLayout left, DescriptorSetLayout right)
         {
@@ -646,9 +686,11 @@ namespace SharpVulkan
 
     public partial struct Sampler : IEquatable<Sampler>
     {
+        public Sampler(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Sampler Null = new Sampler();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Sampler left, Sampler right)
         {
@@ -678,9 +720,11 @@ namespace SharpVulkan
 
     public partial struct DescriptorPool : IEquatable<DescriptorPool>
     {
+        public DescriptorPool(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DescriptorPool Null = new DescriptorPool();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DescriptorPool left, DescriptorPool right)
         {
@@ -710,9 +754,11 @@ namespace SharpVulkan
 
     public partial struct DescriptorSet : IEquatable<DescriptorSet>
     {
+        public DescriptorSet(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DescriptorSet Null = new DescriptorSet();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DescriptorSet left, DescriptorSet right)
         {
@@ -742,9 +788,11 @@ namespace SharpVulkan
 
     public partial struct Framebuffer : IEquatable<Framebuffer>
     {
+        public Framebuffer(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Framebuffer Null = new Framebuffer();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Framebuffer left, Framebuffer right)
         {
@@ -774,9 +822,11 @@ namespace SharpVulkan
 
     public partial struct CommandPool : IEquatable<CommandPool>
     {
+        public CommandPool(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static CommandPool Null = new CommandPool();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(CommandPool left, CommandPool right)
         {
@@ -4943,9 +4993,11 @@ namespace SharpVulkan
 
     public partial struct Surface : IEquatable<Surface>
     {
+        public Surface(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Surface Null = new Surface();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Surface left, Surface right)
         {
@@ -5005,9 +5057,11 @@ namespace SharpVulkan
 
     public partial struct Swapchain : IEquatable<Swapchain>
     {
+        public Swapchain(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Swapchain Null = new Swapchain();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Swapchain left, Swapchain right)
         {
@@ -5095,9 +5149,11 @@ namespace SharpVulkan
 
     public partial struct Display : IEquatable<Display>
     {
+        public Display(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static Display Null = new Display();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(Display left, Display right)
         {
@@ -5127,9 +5183,11 @@ namespace SharpVulkan
 
     public partial struct DisplayMode : IEquatable<DisplayMode>
     {
+        public DisplayMode(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DisplayMode Null = new DisplayMode();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DisplayMode left, DisplayMode right)
         {
@@ -5412,9 +5470,11 @@ namespace SharpVulkan
 
     public partial struct DebugReportCallback : IEquatable<DebugReportCallback>
     {
+        public DebugReportCallback(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static DebugReportCallback Null = new DebugReportCallback();
 
-        internal ulong NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(DebugReportCallback left, DebugReportCallback right)
         {
@@ -5630,9 +5690,11 @@ namespace SharpVulkan
 
     public partial struct ObjectTable : IEquatable<ObjectTable>
     {
+        public ObjectTable(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static ObjectTable Null = new ObjectTable();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(ObjectTable left, ObjectTable right)
         {
@@ -5662,9 +5724,11 @@ namespace SharpVulkan
 
     public partial struct IndirectCommandsLayout : IEquatable<IndirectCommandsLayout>
     {
+        public IndirectCommandsLayout(IntPtr nativeHandle) => NativeHandle = nativeHandle;
+
         public readonly static IndirectCommandsLayout Null = new IndirectCommandsLayout();
 
-        internal IntPtr NativeHandle;
+        public readonly IntPtr NativeHandle;
 
         public static bool operator ==(IndirectCommandsLayout left, IndirectCommandsLayout right)
         {

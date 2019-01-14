@@ -6,7 +6,13 @@ namespace SharpVulkan
 {
     public static partial class Vulkan
     {
-        internal const string LibraryName = "vulkan-1.dll";
+#if PLATFORM_WINDOWS
+        internal const string LibraryName = "vulkan-1";
+#elif PLATFORM_MACOS
+        internal const string LibraryName = "vulkan.1";
+#else
+        internal const string LibraryName = "vulkan";
+#endif
 
         public static unsafe Instance CreateInstance(ref InstanceCreateInfo createInfo, AllocationCallbacks* allocator = null)
         {

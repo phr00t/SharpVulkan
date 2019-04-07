@@ -1426,6 +1426,13 @@ namespace SharpVulkan
             return imageIndex;
         }
 
+        public unsafe Result AcquireNextImageWithResult(Swapchain swapchain, ulong timeout, Semaphore semaphore, Fence fence, out uint imageIndex) {
+            uint val;
+            Result r = vkAcquireNextImageKHR(this, swapchain, timeout, semaphore, fence, &val);
+            imageIndex = val;
+            return r;
+        }
+
         [DllImport(Vulkan.LibraryName, CallingConvention = CallingConvention.StdCall)]
         [SuppressUnmanagedCodeSecurity]
         internal static extern unsafe Result vkAcquireNextImageKHR(Device device, Swapchain swapchain, ulong timeout, Semaphore semaphore, Fence fence, uint* imageIndex);

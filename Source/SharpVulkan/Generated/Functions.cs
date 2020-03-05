@@ -11,7 +11,7 @@ namespace SharpVulkan
 #elif PLATFORM_MACOS
         internal const string LibraryName = "vulkan.1";
 #else
-        internal const string LibraryName = "vulkan";
+        internal const string LibraryName = "libvulkan.so.1";
 #endif
 
         public static unsafe Instance CreateInstance(ref InstanceCreateInfo createInfo, AllocationCallbacks* allocator = null)
